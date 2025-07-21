@@ -1,12 +1,16 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import BlogPage from './pages/Blog.jsx';
 
 function App() {
 
   return (
-    <p className="text-center text-2xl font-bold text-blue-500">
-      Hello, Tailwind CSS!
-    </p>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<BlogPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App
